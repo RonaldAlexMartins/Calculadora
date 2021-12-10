@@ -2,7 +2,12 @@ class CalcController {
   constructor(){
     
     this._displayCalc;
-    this._currentDate; 
+    this._currentDate;
+    this.initialize; 
+
+  }
+
+  initialize(){
 
   }
   get displayCalc (){
