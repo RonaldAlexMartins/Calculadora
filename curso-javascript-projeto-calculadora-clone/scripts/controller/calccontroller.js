@@ -8,7 +8,9 @@ class CalcController {
   }
 
   initialize(){
-
+    document.querySelector("#display");
+    document.querySelector("#data");
+    document.querySelector("#hora");
   }
   get displayCalc (){
     return this._displayCalc;
