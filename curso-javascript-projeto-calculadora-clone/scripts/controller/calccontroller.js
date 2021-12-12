@@ -9,7 +9,7 @@ class CalcController {
   }
 
   initialize(){
-    
+
     this.setDisplayDateTime();
 
     setInterval(() => {
@@ -18,7 +18,11 @@ class CalcController {
   }
 
   setDisplayDateTime (){
-    this.displayDate = this.currentDate.toLocaleDateString(this._locale)
+    this.displayDate = this.currentDate.toLocaleDateString(this._locale, {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    })
     this.displayDate = this.currentDate.toLocaleTimeString(this._locale)
   }
 
