@@ -1,5 +1,6 @@
 class CalcController {
   constructor(){
+    this._locale = 'pt-BR';
     this._dateEl = document.querySelector("#data");
     this._timeEl = document.querySelector("#hora");
     this._displayCalcEL = document.querySelector("#display");
@@ -8,7 +9,17 @@ class CalcController {
   }
 
   initialize(){
-    setInterval()
+    
+    this.setDisplayDateTime();
+
+    setInterval(() => {
+      this.setDisplayDateTime();
+    }, 1000);
+  }
+
+  setDisplayDateTime (){
+    this.displayDate = this.currentDate.toLocaleDateString(this._locale)
+    this.displayDate = this.currentDate.toLocaleTimeString(this._locale)
   }
 
   get displayTime () {
